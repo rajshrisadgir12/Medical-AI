@@ -1,0 +1,44 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>MedSafe AI</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+    <h1>MedSafe AI</h1>
+    <h3>Enter your symptoms</h3>
+
+    <input type="text" id="symptom" placeholder="e.g. fever, cough">
+    <br><br>
+
+    <button onclick="check()">Check</button>
+
+    <p id="result"></p>
+
+    <br><br>
+
+    <button onclick="emergency()">
+        🚨 Emergency
+    </button>
+
+    <script>
+        function check() {
+            let text = document.getElementById("symptom").value;
+            let result = document.getElementById("result");
+
+            if (text.includes("fever") && text.includes("cough")) {
+                result.innerHTML = "You may have Cold or Flu";
+            } else if (text.includes("chest pain")) {
+                result.innerHTML = "⚠️ Serious condition! Consult doctor";
+            } else {
+                result.innerHTML = "Condition unclear";
+            }
+        }
+
+        function emergency() {
+            alert("🚨 Emergency Alert Sent!");
+        }
+    </script>
+
+</body>
+</html>
