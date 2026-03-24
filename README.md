@@ -1,2 +1,1 @@
-# Medical-AI
-yhshbs
+# Medical ai
